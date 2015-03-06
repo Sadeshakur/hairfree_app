@@ -1,0 +1,7 @@
+<%= form_tag '/signup' do %>
+  <%= f.label        :hair, "Favorite Hairstyle:" %><br/>
+  <%= text_field_tag :hair     :placeholder => "bantu knots, Afro, Sleek & Straight" %>
+  <%= f.label        :location, "Current Location:" %><br/>
+  <%= text_field_tag :location :placeholder => "favorite hairstyle" %>
+  <%= submit_tag 'Submit!' %>
+<% end %>
