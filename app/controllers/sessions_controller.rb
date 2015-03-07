@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(password)
       session[:user_id] = user.id
       redirect_to '/home'
+    end
   end
 
   def callback
