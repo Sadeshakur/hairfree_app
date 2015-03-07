@@ -10,7 +10,6 @@
 
 
   <span>
-    <div class="logo"><small><%= image_tag "fl.jpg" %></small></div>
     <div class="nav">
         <% if session[:user_id] %>
           <h1>HAIRFREE!</h1>
@@ -26,7 +25,7 @@
           </span>
         <% end %>
     </div>
-    </div>
+    <div class="logo"><small><%= image_tag "fl.jpg" %></small></div>
   </span>
 
   <%= yield %>
