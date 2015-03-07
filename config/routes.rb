@@ -13,8 +13,12 @@ Rails.application.routes.draw do
 
   get    '/welcome'   =>    'welcome#new'
   get    '/home'      =>    'welcome#index'
+
   get    '/profile'   =>    'profiles#index'
-  get    '/event'     =>    'events#index'
+
+  get    '/events'    =>    'events#index'
+  get    '/events'    =>    'events#index'
+
 
   # get    '/signup'    =>    'users#new'
 end
