@@ -7,7 +7,9 @@ class SessionsController < ApplicationController
     email    = params[:email]
     password = params[:password]
     user     = User.find_by email: email
-    redirect_to '/home'
+    if user && user.authenticate(password)
+      session[:user_id] = user.id
+      redirect_to '/home'
   end
 
   def callback
