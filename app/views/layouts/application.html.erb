@@ -9,10 +9,12 @@
 <body>
 
 
-  <span>
-    <div class="logo"><small><%= image_tag "fl.jpg" %></small></div>
-    <h1>HAIRFREE!</h1>
-  </span>
+    <div class="header">
+      <span>
+        <small><%= image_tag "fl.jpg" %></small>
+        <h1>HAIRFREE!</h1>
+      </span>
+    </div>
     <div class="nav">
         <% if session[:user_id] %>
           <a href="/logout">Log Out</a>
