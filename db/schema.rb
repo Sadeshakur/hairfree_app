@@ -22,11 +22,40 @@ ActiveRecord::Schema.define(version: 20150305235833) do
     t.string   "l_name"
     t.string   "sex"
     t.date     "born_on"
-    t.string   "phone"
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.string   "Location"
+    t.string   "hair"
+    t.date     "born_on"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.string   "Location"
+    t.string   "hair"
+    t.date     "born_on"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+
+
+
+
+
 
 end

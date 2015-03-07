@@ -1,8 +1,12 @@
 <%= form_tag '/signup' do %>
-  <%= label          :hair, "Favorite Hairstyle:" %><br/>
-  <%= text_field_tag :hair     :placeholder => "bantu knots, Afro, Sleek & Straight" %>
-  <%= label          :location, "Current Location:" %><br/>
-  <%= text_field_tag :location :placeholder => "favorite hairstyle" %>
+  <%= label          :title,       "Event Title"       %><br/>
+  <%= text_field_tag :title        %>
+  <%= label          :location,    "Address"           %><br/>
+  <%= text_field_tag :location     %>
+  <%= label          :time,        "Time"              %><br/>
+  <%= date_tag       :time         %>
+  <%= label          :description, "Description"       %><br/>
+  <%= text_field_tag :description                      %><br/>o
   <%= submit_tag 'Submit!' %>
 <% end %>
 
