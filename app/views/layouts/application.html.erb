@@ -12,14 +12,14 @@
 
 <div class="half"><%= image_tag "ga-lockup.png" %></div>
     <div class="half">
-      <ul>
         <% if session[:user_id] %>
           <li><a href="/logout">Log Out</a></li>
         <% else %>
-          <li><a href="/signup">Sign Up</a></li>
-          <li><a href="/login">Log In</a></li>
+          <span>
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          </span>
         <% end %>
-      </ul>
     </div>
   </div>
 
