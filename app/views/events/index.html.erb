@@ -1,1 +1,8 @@
-<h1>EVENTS</h1>
+<h2>EVENTS</h2>
+
+<a href='/events/new'>Add an event</a>
+
+<% @events.each do |event| %>
+  <li><a href="/show/events/<%= event.id %>"><%= event.user_name %></a></li>
+<% end %>
+
