@@ -30,6 +30,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:access_token] = nil
     session[:user_id] = nil
+    redirect_to root_pat
   end
 
 end
