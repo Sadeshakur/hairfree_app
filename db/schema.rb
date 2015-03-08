@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150308065415) do
   create_table "events", force: :cascade do |t|
 
     t.string   "title"
-    t.string   "image_url"
+    t.string   "pic_url"
     t.string   "event_type"
     t.string   "location"
     t.date     "date"

@@ -37,13 +37,13 @@ Profile.create([
 ])
 
 Event.create([
-  { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
     title: "Angelina", category: "brunch", location: "New York", date: "1/20/2015", time: "7PM", description: "fun"},
-  { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
     title: "Sade",     category: "brunch", location: "New York", date: "1/21/2015", time: "7PM", description: "fun"},
-  { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
     title: "Dennis",   category: "brunch", location: "New York", date: "1/22/2015", time: "7PM", description: "fun"},
-  { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
     title: "Dana",     category: "brunch", location: "New York", date: "1/23/2015", time: "7PM", description: "fun"}
 ])
 
