@@ -5,12 +5,13 @@
 <br/>
 <p>
   <div class="events">
-    Photo:              <%= @event.pic_url     %>
-    Alias:              <%= @event.title       %><br/>
-    Category:           <%= @event.category    %><br/>
-    Title:              <%= @event.location    %><br/>
-    Hair:               <%= @event.date        %><br/>
-    Location:           <%= @event.time        %><br/>
-    Bio:                <%= @event.description %><br/>
+    Event:              <%= @event.pic_url       %><br/>
+    Title:              <%= @event.title         %><br/>
+    Category:           <%= @event.category      %><br/>
+    Location:           <%= @event.location      %><br/>
+    Date:               <%= @event.date          %><br/>
+    Time:               <%= @event.time          %><br/>
+    Description:        <%= @event.description   %><br/>
+    Posted by:          <%  current_user.name    %><br/>
   </div>
 </p>

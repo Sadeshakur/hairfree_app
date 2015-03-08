@@ -33,10 +33,10 @@ Profile.create([
 ])
 
 Event.create([
-  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "Angelina", category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "ambethoney@yahoo.com").id},
-  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "Sade",     category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "sadeshakur@gmail.com").id},
-  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "Dennis",   category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "dennisliaw@gmail.com").id},
-  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "Dana",     category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "dana.dflip@gmail.com").id}
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "afropunk",  category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "ambethoney@yahoo.com").id},
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "afropunk",  category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "sadeshakur@gmail.com").id},
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "afropunk",  category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "dennisliaw@gmail.com").id},
+  { pic_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",  title: "afropunk",  category: "brunch", location: "New York", date: "April 13 2015", time: "7PM", description: "fun", users_id: User.find_by(email: "dana.dflip@gmail.com").id}
 ])
 
 
