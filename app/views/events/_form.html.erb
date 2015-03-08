@@ -1,19 +1,19 @@
-<%= form_tag '/events' do %>
+<%= form_tag '/events' do |f| %>
   <%= f.label        :image_url,   "Profile Photo"     %><br/>
-  <%= url_field_tag  :image_url    %>
+  <%= f.url_field_tag  :image_url    %>
   <%= label          :title,       "Event Title"       %>
-  <%= text_field_tag :title        %>
-  <%= label          :category,    "Event Category"    %>
-  <%= select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["                               forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])%>
-  <%= label          :location,    "Address"           %><br/>
-  <%= text_field_tag :location     %><br/>
-  <%= label          :date,        "Date"              %>
-  <%= date_tag       :date         %>
-  <%= label          :time,        "Time"              %>
-  <%= date_tag       :time         %><br/>
-  <%= label          :description, "Description"       %><br/>
-  <%= text_field_tag :description                      %><br/>
-  <%= submit_tag 'Submit!' %>
+  <%= f.text_field_tag :title        %>
+  <%= f.label          :category,    "Event Category"    %>
+  <%= f.select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["                               forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])%>
+  <%= f.label          :location,    "Address"           %><br/>
+  <%= f.text_field_tag :location     %><br/>
+  <%= f.label          :date,        "Date"              %>
+  <%= f.date_tag       :date         %>
+  <%= f.label          :time,        "Time"              %>
+  <%= f.date_tag       :time         %><br/>
+  <%= f.label          :description, "Description"       %><br/>
+  <%= f.text_field_tag :description                      %><br/>
+  <%= f.submit_tag 'Submit!' %>
 <% end %>
 
 
