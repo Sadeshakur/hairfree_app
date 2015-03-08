@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305235833) do
+ActiveRecord::Schema.define(version: 20150308012440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.string   "sex"
+    t.date     "born_on"
+    t.string   "phone"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "type"
@@ -22,40 +34,11 @@ ActiveRecord::Schema.define(version: 20150305235833) do
     t.string   "l_name"
     t.string   "sex"
     t.date     "born_on"
+    t.string   "phone"
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "f_name"
-    t.string   "l_name"
-    t.string   "Location"
-    t.string   "hair"
-    t.date     "born_on"
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string   "f_name"
-    t.string   "l_name"
-    t.string   "Location"
-    t.string   "hair"
-    t.date     "born_on"
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-
-
-
-
-
 
 end
