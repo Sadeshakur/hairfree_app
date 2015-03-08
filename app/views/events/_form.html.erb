@@ -1,7 +1,7 @@
 <%= form_tag '/events' do |f| %>
-  <%= f.label        :image_url,   "Profile Photo"     %><br/>
+  <%= f.label          :image_url,   "Profile Photo"     %><br/>
   <%= f.url_field_tag  :image_url    %>
-  <%= label          :title,       "Event Title"       %>
+  <%= label            :title,       "Event Title"       %>
   <%= f.text_field_tag :title        %>
   <%= f.label          :category,    "Event Category"    %>
   <%= f.select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["                               forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])%>
