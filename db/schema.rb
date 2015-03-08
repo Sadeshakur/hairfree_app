@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150308065415) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "image_url"
-    t.string   "title"
+    t.string   "name"
     t.string   "location"
     t.string   "bio"
     t.string   "hair"
