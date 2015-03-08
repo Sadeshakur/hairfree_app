@@ -19,10 +19,10 @@ User.create([
 ])
 
 Account.create([
-  {    f_name: "Angelina", l_name: "Bethoney", born_on: "April 13 1989",    phone: "774-291-0958", users_id: User.find_by(email: "ambethoney@yahoo.com").id},
-  {    f_name: "Sade",     l_name: "Stevens",  born_on: "November 10 1991", phone: "516-043-7720", users_id: User.find_by(email: "sadeshakur@gmail.com").id},
-  {    f_name: "Dennis",   l_name: "Liaw",     born_on: "May 16 1987",      phone: "678-455-9920", users_id: User.find_by(email: "dennisliaw@gmail.com").id},
-  {    f_name: "Dana",     l_name: "DeFilipo", born_on: "April 14 1991",    phone: "516-987-8427", users_id: User.find_by(email: "dana.dflip@gmail.com").id}
+  { f_name: "Angelina", l_name: "Bethoney", born_on: "April 13 1989",    phone: "774-291-0958", users_id: User.find_by(email: "ambethoney@yahoo.com").id},
+  { f_name: "Sade",     l_name: "Stevens",  born_on: "November 10 1991", phone: "516-043-7720", users_id: User.find_by(email: "sadeshakur@gmail.com").id},
+  { f_name: "Dennis",   l_name: "Liaw",     born_on: "May 16 1987",      phone: "678-455-9920", users_id: User.find_by(email: "dennisliaw@gmail.com").id},
+  { f_name: "Dana",     l_name: "DeFilipo", born_on: "April 14 1991",    phone: "516-987-8427", users_id: User.find_by(email: "dana.dflip@gmail.com").id}
 ])
 
 Profile.create([

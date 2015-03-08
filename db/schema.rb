@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150308164933) do
     t.string   "f_name"
     t.string   "l_name"
     t.date     "born_on"
-    t.datetime "phone"
+    t.string   "phone"
     t.integer  "users_id", null: false
   end
 
