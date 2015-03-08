@@ -4,7 +4,7 @@
   <%= label            :title,       "Event Title"       %>
   <%= f.text_field_tag :title        %>
   <%= f.label          :category,    "Event Category"    %>
-  <%= f.select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["                               forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])%>
+  <%= f.select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["                               forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])     %>
   <%= f.label          :location,    "Address"           %><br/>
   <%= f.text_field_tag :location     %><br/>
   <%= f.label          :date,        "Date"              %>

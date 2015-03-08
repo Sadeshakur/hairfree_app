@@ -1,10 +1,12 @@
-<%= form_tag '/profiles/new' do |f| %>
-  <%= f.label            :name,      "Name or Alias"                             %><br/>
-  <%= f.url_field_tag    :name,      :placeholder => "Naptural, AfricanCreature" %>
-  <%= f.label            :gender,    "Favorite Hairstyle:"                       %><br/>
-  <%= f.radio_button_tag :gender,    'male', 'female'                            %>
-  <%= f.label            :phone,     "Main Phone:"                               %><br/>
-  <%= f.phone_field_tag  :phone,                                                 %>
-  <%= f.submit_tag 'Submit!'                                                     %>
+<%= form_tag '/account' do |f| %>
+  <%= f.label            :f_name,    "First name"                       %><br/>
+  <%= f.url_field_tag    :f_name,                                       %>
+  <%= f.label            :l_name,    "Last name"                        %><br/>
+  <%= f.url_field_tag    :l_name,                                       %>
+  <%= f.label            :born_on,   "Date of Birthday"                 %><br/>
+  <%= f.date             :born_on,                                      %>
+  <%= f.label            :phone,     "Phone # (for security reasons)"   %><br/>
+  <%= f.phone_field_tag  :phone,                                        %>
+  <%= f.submit_tag 'Submit!'                                            %>
 <% end %>
 
