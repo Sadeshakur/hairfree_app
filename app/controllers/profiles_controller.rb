@@ -7,11 +7,11 @@ class ProfilesController < ApplicationController
   def new
     @user = User.find params[:id]
     @profile = Profile.new
+    @profile.users_id = params[:id]
   end
 
   def show
-    @user = User.find params[:id]
-    @profile = Profile.all
+    @interview = Interview.find(params[:id])
   end
 
 end
