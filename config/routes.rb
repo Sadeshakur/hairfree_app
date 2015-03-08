@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get    '/profile/new'       =>    'profiles#new'
 
   get    '/events'            =>    'events#index'
-  get    '/events/:id'        =>    'events#show'
+  get    '/events/show/:id'   =>    'events#show'
   get    '/events/new'        =>    'events#new'
 
 

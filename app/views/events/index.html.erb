@@ -4,7 +4,9 @@
 
 <% @events.each do |event| %>
 <li>
-  <a href='/events/<%= event.id %>'><%= event.name %></a><br/>
-  <%= event.date %><%= event.category %>
+  <a href='/events/show/<%= event.id %>'><%= event.title %><br/>
+    <%= event.category %><br/>
+    <%= event.date %>
+  </a>
 <% end %>
 
