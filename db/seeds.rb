@@ -14,9 +14,9 @@ User.create([
   { f_name: "Dennis",   l_name: "Liaw",     sex: "male",   born_on: "May 16 1987",      phone: "678-455-9920", email: "dennisliaw@gmail.com", password: "password"},
   { f_name: "Dana",     l_name: "DeFilipo", sex: "female", born_on: "April 14 1991",    phone: "516-987-8427", email: "dana.dflip@gmail.com", password: "password"}
 ])
-User.create([
-  { f_name: "Angelina", l_name: "Bethoney", location: "New York", hair: "natural", born_on: "April 13 1989",    email: "ambethoney@yahoo.com", password: "password"},
-  { f_name: "Sade",     l_name: "Stevens",  location: "New York", hair: "natural", born_on: "November 10 1991", email: "sadeshakur@gmail.com", password: "password"},
-  { f_name: "Dennis",   l_name: "Liaw",     location: "New York", hair: "natural", born_on: "May 16 1987",      email: "dennisliaw@gmail.com", password: "password"},
-  { f_name: "Dana",     l_name: "DeFilipo", location: "New York", hair: "natural", born_on: "April 14 1991",    email: "dana.dflip@gmail.com", password: "password"}
+Profile.create([
+  { f_name: "Angelina", l_name: "Bethoney", location: "New York", hair: "natural"},
+  { f_name: "Sade",     l_name: "Stevens",  location: "New York", hair: "natural"},
+  { f_name: "Dennis",   l_name: "Liaw",     location: "New York", hair: "natural"},
+  { f_name: "Dana",     l_name: "DeFilipo", location: "New York", hair: "natural"}
 ])

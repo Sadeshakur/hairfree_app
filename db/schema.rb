@@ -19,17 +19,14 @@ ActiveRecord::Schema.define(version: 20150308012440) do
   create_table "profiles", force: :cascade do |t|
     t.string   "f_name"
     t.string   "l_name"
-    t.string   "sex"
-    t.date     "born_on"
-    t.string   "phone"
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
+    t.string   "location"
+    t.date     "hair"
+    t.string   "born"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "type"
     t.string   "f_name"
     t.string   "l_name"
     t.string   "sex"
