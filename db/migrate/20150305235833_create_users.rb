@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string     :email, null: false, unique: true
       t.string     :password_digest, null: false
       t.timestamps
-    end
+      t.references :profiles
+      end
+    add_column :users, :name, :string
   end
 end
