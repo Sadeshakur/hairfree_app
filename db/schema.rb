@@ -17,14 +17,15 @@ ActiveRecord::Schema.define(version: 20150308065415) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.integer  "users_id",    null: false
+
     t.string   "title"
+    t.string   "image_url"
     t.string   "event_type"
     t.string   "location"
     t.date     "date"
     t.datetime "time"
     t.string   "description"
-    t.integer  "users_id"
+    t.integer  "users_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150308065415) do
     t.string   "bio"
     t.string   "hair"
     t.string   "user_type"
-    t.integer  "users_id"
+    t.integer  "users_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150308065415) do
     t.string   "sex"
     t.date     "born_on"
     t.string   "phone"
-    t.integer  "users_id"
+    t.integer  "users_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
