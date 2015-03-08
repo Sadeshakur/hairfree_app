@@ -1,8 +1,8 @@
 <%= form_tag '/profiles/new' do %>
-  <%= f.label          :name,      "Name or Alias" %><br/>
-  <%= url_field_tag    :name,      :placeholder => "Naptural, AfricanCreature" %>
   <%= f.label          :image_url, "Profile Photo" %><br/>
   <%= text_field_tag   :image_url  %>
+  <%= f.label          :name,      "Name or Alias" %><br/>
+  <%= url_field_tag    :name,      :placeholder => "Naptural, AfricanCreature" %>
   <%= f.label          :location,  "Current Location:" %><br/>
   <%= text_field_tag   :location,  %>
   <%= f.label          :bio,       "Short Bio:" %><br/>
