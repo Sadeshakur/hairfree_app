@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20150308065415) do
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-
     t.string   "title"
     t.string   "pic_url"
     t.string   "event_type"
