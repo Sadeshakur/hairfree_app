@@ -41,16 +41,16 @@ ActiveRecord::Schema.define(version: 20150308065415) do
     t.datetime "updated_at"
   end
 
- create_table "accounts", force: :cascade do |t|
-    t.string   "f_name"
-    t.string   "l_name"
-    t.string   "sex"
-    t.date     "born_on"
-    t.string   "phone"
-    t.integer  "users_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ # create_table "accounts", force: :cascade do |t|
+ #    t.string   "f_name"
+ #    t.string   "l_name"
+ #    t.string   "sex"
+ #    t.date     "born_on"
+ #    t.string   "phone"
+ #    t.integer  "users_id",    null: false
+ #    t.datetime "created_at"
+ #    t.datetime "updated_at"
+ #  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
