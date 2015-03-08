@@ -24,26 +24,40 @@ ActiveRecord::Schema.define(version: 20150308065415) do
     t.date     "date"
     t.datetime "time"
     t.string   "description"
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "f_name"
-    t.string   "l_name"
-    t.string   "location"
-    t.date     "hair"
-    t.string   "born"
+    t.integer  "users_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "profiles", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "name"
+    t.string   "location"
+    t.string   "bio"
+    t.string   "hair"
+    t.string   "user_type"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+ create_table "accounts", force: :cascade do |t|
     t.string   "f_name"
     t.string   "l_name"
     t.string   "sex"
     t.date     "born_on"
     t.string   "phone"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
     t.string   "password_digest", null: false
+    t.integer  "accounts_id"
+    t.integer  "profiles_id"
+    t.integer  "events_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
