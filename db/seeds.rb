@@ -38,13 +38,13 @@ Profile.create([
 
 Event.create([
   { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
-    title: "Angelina", category: "", location: "New York", date: "1/20/2015", time: "7PM", description: "fun"},
+    title: "Angelina", category: "brunch", location: "New York", date: "1/20/2015", time: "7PM", description: "fun"},
   { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
-    title: "Sade",     category: "", location: "New York", date: "1/21/2015", time: "7PM", description: "fun"},
+    title: "Sade",     category: "brunch", location: "New York", date: "1/21/2015", time: "7PM", description: "fun"},
   { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
-    title: "Dennis",   category: "", location: "New York", date: "1/22/2015", time: "7PM", description: "fun"},
+    title: "Dennis",   category: "brunch", location: "New York", date: "1/22/2015", time: "7PM", description: "fun"},
   { image_url: "http://www.brooklynvegan.com/img/music/afropunk/2012/day1/54.jpg",
-    title: "Dana",     category: "", location: "New York", date: "1/23/2015", time: "7PM", description: "fun"}
+    title: "Dana",     category: "brunch", location: "New York", date: "1/23/2015", time: "7PM", description: "fun"}
 ])
 
 
