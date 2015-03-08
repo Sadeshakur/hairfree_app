@@ -11,22 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308065415) do
+ActiveRecord::Schema.define(version: 20150308164933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", force: :cascade do |t|
+    t.string   "f_name"
+    t.string   "l_name"
+    t.date     "born_on"
+    t.datetime "phone"
+    t.integer  "users_id", null: false
+  end
+
   create_table "events", force: :cascade do |t|
+    t.string   "image_url"
     t.string   "title"
-    t.string   "pic_url"
-    t.string   "event_type"
+    t.string   "category"
     t.string   "location"
     t.date     "date"
     t.datetime "time"
     t.string   "description"
     t.integer  "users_id",    null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -36,28 +42,18 @@ ActiveRecord::Schema.define(version: 20150308065415) do
     t.string   "bio"
     t.string   "hair"
     t.string   "user_type"
-    t.integer  "users_id",    null: false
+    t.integer  "events_id"
+    t.integer  "users_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
- # create_table "accounts", force: :cascade do |t|
- #    t.string   "f_name"
- #    t.string   "l_name"
- #    t.string   "sex"
- #    t.date     "born_on"
- #    t.string   "phone"
- #    t.integer  "users_id",    null: false
- #    t.datetime "created_at"
- #    t.datetime "updated_at"
- #  end
-
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
     t.integer  "accounts_id"
     t.integer  "profiles_id"
     t.integer  "events_id"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
