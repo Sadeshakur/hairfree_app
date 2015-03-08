@@ -18,7 +18,7 @@
 
     <div class="nav">
         <% if session[:user_id] %>
-        <!-- <h3>Signed in as <%= session["user_info"]["first_name"] %></h3> -->
+        <!-- <h3>Signed in as < session["user_info"]["first_name"] %></h3> -->
           <a href="/logout">Log Out</a>
         <% elsif session[:access_token] %>
           <a href="/logout">Log Out</a>
