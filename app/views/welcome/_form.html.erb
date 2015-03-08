@@ -1,7 +1,20 @@
-<%= form_tag '/signup' do %>
-  <%= f.label        :hair, "Favorite Hairstyle:" %><br/>
-  <%= text_field_tag :hair     :placeholder => "bantu knots, Afro, Sleek & Straight" %>
-  <%= f.label        :location, "Current Location:" %><br/>
-  <%= text_field_tag :location :placeholder => "favorite hairstyle" %>
+<%= form_tag '/profiles' do %>
+  <%= f.label          :name,      "Name or Alias" %><br/>
+  <%= url_field_tag    :name,      :placeholder => "Naptural, AfricanCreature" %>
+  <%= f.label          :image_url, "Profile Photo" %><br/>
+  <%= text_field_tag   :image_url  %>
+  <%= f.label          :location,  "Current Location:" %><br/>
+  <%= text_field_tag   :location,  %>
+  <%= f.label          :bio,       "Short Bio:" %><br/>
+  <%= text_field_tag   :bio,       %>
+  <%= f.label          :hair,      "Favorite Hairstyle:" %><br/>
+  <%= text_field_tag   :hair,      :placeholder => "bantu knots, Afro, Sleek & Straight" %>
+  <%= f.label          :user_type, "Title:" %><br/>
+  <%= select_tag       :user_type, options_for_select([["blogger"],["youtuber"],["naturalista"]])%>
+  <%= f.label          :gender,    "Favorite Hairstyle:" %><br/>
+  <%= radio_button_tag :gender,    %>
+  <%= f.label          :phone,     "Main Phone:" %><br/>
+  <%= phone_field_tag  :phone,     %>
   <%= submit_tag 'Submit!' %>
 <% end %>
+
