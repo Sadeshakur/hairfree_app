@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+Profile.destroy_all
+Event.destroy_all
 
 User.create([
   { f_name: "Angelina", l_name: "Bethoney", sex: "female", born_on: "April 13 1989",    phone: "774-291-0958", email: "ambethoney@yahoo.com", password: "password"},
@@ -14,7 +16,15 @@ User.create([
   { f_name: "Dennis",   l_name: "Liaw",     sex: "male",   born_on: "May 16 1987",      phone: "678-455-9920", email: "dennisliaw@gmail.com", password: "password"},
   { f_name: "Dana",     l_name: "DeFilipo", sex: "female", born_on: "April 14 1991",    phone: "516-987-8427", email: "dana.dflip@gmail.com", password: "password"}
 ])
+
 Profile.create([
+  { f_name: "Angelina", l_name: "Bethoney", location: "New York", hair: "natural"},
+  { f_name: "Sade",     l_name: "Stevens",  location: "New York", hair: "natural"},
+  { f_name: "Dennis",   l_name: "Liaw",     location: "New York", hair: "natural"},
+  { f_name: "Dana",     l_name: "DeFilipo", location: "New York", hair: "natural"}
+])
+
+Event.create([
   { f_name: "Angelina", l_name: "Bethoney", location: "New York", hair: "natural"},
   { f_name: "Sade",     l_name: "Stevens",  location: "New York", hair: "natural"},
   { f_name: "Dennis",   l_name: "Liaw",     location: "New York", hair: "natural"},

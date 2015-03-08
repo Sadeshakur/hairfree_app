@@ -1,13 +1,15 @@
-<%= form_tag '/signup' do %>
+<%= form_tag '/events' do %>
   <%= label          :title,       "Event Title"       %><br/>
   <%= text_field_tag :title        %>
+  <%= label          :event_type,  "Event Category"       %><br/>
+  <%= text_field_tag :event_type   %>
   <%= label          :location,    "Address"           %><br/>
   <%= text_field_tag :location     %>
+  <%= label          :date,        "Date"              %><br/>
+  <%= date_tag       :date         %>
   <%= label          :time,        "Time"              %><br/>
   <%= date_tag       :time         %>
   <%= label          :description, "Description"       %><br/>
   <%= text_field_tag :description                      %><br/>o
   <%= submit_tag 'Submit!' %>
 <% end %>
-
-

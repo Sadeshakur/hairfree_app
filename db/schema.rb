@@ -38,4 +38,15 @@ ActiveRecord::Schema.define(version: 20150308012440) do
     t.datetime "updated_at"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "title"
+    t.string   "location"
+    t.date     "date"
+    t.string   "time"
+    t.string   "description",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
