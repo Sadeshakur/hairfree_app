@@ -1,6 +1,19 @@
+
+
+<span>
+  <a href='/home'>Home</a>
+  <a href='/profiles/show/id'>Your Profile</a>
+  <a href='/events'>Events</a>
+</span>
+
 <ul>
   <%= image_tag "3.jpg" %>
   <%= image_tag "1.jpg" %>
   <%= image_tag "2.jpg" %>
   <%= image_tag "5.jpg" %>
 </ul>
+
+<div class = 'search_bar'>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search' %>
+</div>

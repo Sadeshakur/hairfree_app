@@ -17,11 +17,10 @@
     </div>
 
     <div class="nav">
-        <% if session[:user_id] %>
+        <% if session[:access_token] %>
           <a href="/logout">Log Out</a>
-        <% elsif session[:access_token] %>
+        <% elsif session[:user_id] %>
           <a href="/logout">Log Out</a>
-
         <% else %>
               <a href='/oauth/connect'>Sign in with Instagram</a></p>
             <span>
