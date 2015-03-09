@@ -36,14 +36,15 @@ ActiveRecord::Schema.define(version: 20150308164933) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string   "image_url"
-    t.string   "name"
+    t.string   "profile_pic"
+    t.string   "username"
+    t.string   "user_type"
+    t.string   "website"
     t.string   "location"
     t.string   "bio"
     t.string   "hair"
-    t.string   "user_type"
     t.integer  "events_id"
-    t.integer  "users_id",   null: false
+    t.integer  "users_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

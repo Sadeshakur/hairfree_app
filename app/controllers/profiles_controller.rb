@@ -20,11 +20,11 @@ class ProfilesController < ApplicationController
 
     if sessions[:access_token]
       @profile             =  response.user
-      @profile.name        =  response.user.username
+      @profile.username    =  response.user.username
       @profile.bio         =  response.user.bio
       @profile.website     =  response.user.website
       @profile.profile_pic =  response.user.profile_picture
-      @profile.full_name   =  response.user.full_name
+      @account.full_name   =  response.user.full_name
       @profile.id          =  response.user.id
       @profile.user_type   =  nil
       @profile.location    =  nil
