@@ -23,6 +23,10 @@ class ProfilesController < ApplicationController
     redirect_to '/profiles'
   end
 
+  def edit
+    @profile = Profile.find(params[:id])
+  end
+
   def profile_params
     params.require(:profile).permit(:image_url, :name, :location, :bio, :hair, :user_type)
   end

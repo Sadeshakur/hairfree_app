@@ -1,6 +1,6 @@
 <%= form_tag '/events' do |f| %>
-  <%= f.label          :pic_url,   "Profile Photo"     %><br/>
-  <%= f.url_field_tag  :pic_url    %>
+  <%= f.label          :pic_url,     "Profile Photo"     %><br/>
+  <%= f.image_tag      :pic_url      %>
   <%= label            :title,       "Event Title"       %>
   <%= f.text_field_tag :title        %>
   <%= f.label          :category,    "Event Category"    %>

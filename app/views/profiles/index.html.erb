@@ -1,8 +1,9 @@
 <h2>EVENTS</h2>
 
+
 <% @profiles.each do |profile| %>
   <ul>
-    <li><a href='/events/<%= event.id %>'><%= event.title %></a></li>
-    <li><%= event.date %><%= event.category %></li>
+    <li><a href='/search/<%= profile.id %>'><%= profile.name %></a></li>
+    <li><%= profile.user_type %>  |  <%= profile.user_type %></li>
   </ul>
 <% end %>
