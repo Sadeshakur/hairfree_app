@@ -8,9 +8,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css">
+<!--   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../assets/stylesheets/style.css">
+  <link rel="stylesheet" href="../assets/stylesheets/style.css"> -->
 </head>
 <body>
   <header>
@@ -23,10 +23,10 @@
       </div>
       <div class="half social">
         <div class="social-icons-wrapper horizontally-centered">
-          <img src="image-url('instagram.jpg')" class="social-icon" alt="instagram">
-          <img src="../assets/images/twitter.jpg" class="social-icon" alt="twitter">
-          <img src="../assets/images/facebook.png" class="social-icon" alt="facebook">
-          <img src="../assets/images/tumblr.png" class="social-icon" alt="tumblr">
+          <div><%= image_tag "instagram.jpg" %> class="social-icon" alt="instagram"</div>
+          <div><%= image_tag "twitter.jpg" %> class="social-icon" alt="twitter"</div>
+          <div><%= image_tag "facebook.jpg" %> class="social-icon" alt="facebook</div>
+          <div><%= image_tag "tumblr.jpg" %> class="social-icon" alt="tumblr"</div>
         </div>
       </div>
     </div>
@@ -83,6 +83,6 @@
       <p class="copyright">@ 2015 Sade Shakur</p>
     </div>
   </footer>
-  <script src="scripts/main.js"></script>
+  <!-- <script src="scripts/main.js"></script> -->
 </body>
 </html>
