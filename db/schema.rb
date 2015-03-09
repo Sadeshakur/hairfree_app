@@ -17,11 +17,10 @@ ActiveRecord::Schema.define(version: 20150308164933) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string  "f_name"
-    t.string  "l_name"
+    t.string  "full_name"
     t.date    "born_on"
     t.string  "phone"
-    t.integer "users_id", null: false
+    t.integer "users_id",  null: false
   end
 
   create_table "events", force: :cascade do |t|

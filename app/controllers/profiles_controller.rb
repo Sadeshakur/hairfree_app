@@ -27,6 +27,7 @@ class ProfilesController < ApplicationController
       user = User.find_by id: profile[:users_id]
       user.profiles_id = profile.id
       profile.save
+      # binding.pry
       redirect_to '/show/profile'
   end
 

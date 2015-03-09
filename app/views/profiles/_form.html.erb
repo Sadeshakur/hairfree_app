@@ -1,20 +1,20 @@
 <%= form_tag '/profiles/new' do |f|  %>
-  <%= f.label          :profile_pic, "Profile Photo" %><br/>
-  <%= f.url_field_tag  :profile_pic, %>
-  <%= f.label          :website,     "Website" %><br/>
-  <%= f.url_field_tag  :website,     %>
-  <%= f.label          :username,    "Name or Alias" %><br/>
-  <%= f.text_field_tag :username,    :placeholder => "Naptural, AfricanCreature" %>
-  <%= f.label          :location,    "Current Location:" %><br/>
-  <%= f.text_field_tag :location,    %>
-  <%= f.label          :bio,         "Short Bio:" %><br/>
-  <%= f.text_field_tag :bio,         %>
-  <%= f.label          :hair,        "Favorite Hairstyle:" %><br/>
-  <%= f.text_field_tag :hair,        :placeholder => "bantu knots, Afro, Sleek & Straight" %>
-  <%= f.label          :user_type,   "Title:" %><br/>
-  <%= f.select_tag     :user_type, options_for_select([["blogger"],["youtuber"],["naturalista"]])%>
-  <%= f.label          :website,     "Add a website" %><br/>
-  <%= f.url_field_tag  :website,     :placeholder => "curiouscurls@wordpress.com" %>
-  <%= f.submit_tag     'Create Profile!' %>
+  <%= label          :profile_pic, "Profile Photo" %><br/>
+  <%= url_field_tag  :profile_pic, %>
+  <%= label          :website,     "Website" %><br/>
+  <%= url_field_tag  :website,     %>
+  <%= label          :username,    "Name or Alias" %><br/>
+  <%= text_field_tag :username,    :placeholder => "Naptural, AfricanCreature" %>
+  <%= label          :location,    "Current Location:" %><br/>
+  <%= text_field_tag :location,    %>
+  <%= label          :bio,         "Short Bio:" %><br/>
+  <%= text_field_tag :bio,         %>
+  <%= label          :hair,        "Favorite Hairstyle:" %><br/>
+  <%= text_field_tag :hair,        :placeholder => "bantu knots, Afro, Sleek & Straight" %>
+  <%= label          :user_type,   "Title:" %><br/>
+  <%= select_tag     :user_type, options_for_select([["blogger"],["youtuber"],["naturalista"]])%>
+  <%= label          :website,     "Add a website" %><br/>
+  <%= url_field_tag  :website,     :placeholder => "curiouscurls@wordpress.com" %>
+  <%= submit_tag     'Create Profile!' %>
 <% end %>
 

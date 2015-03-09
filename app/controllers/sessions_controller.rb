@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     user     = User.find_by email: email
     if user && user.authenticate(password)
       session[:user_id] = user.id
-      # account.email = user.email
       redirect_to '/home'
     end
   end
@@ -19,13 +18,15 @@ class SessionsController < ApplicationController
       params[:code],
       :redirect_uri => "http://#{request.host_with_port}/oauth/callback"
     )
-    session[:access_token] = response.access_token
-      @name      =  response.user.username
-      @bio       =  response.user.bio
-      @website   =  response.user.website
-      @image_url =  response.user.profile_picture
-      @full_name =  response.user.full_name
-      @id        =  response.user.id
+    session[:access_token]=  response.access_token
+      @profile             =  response.user
+      @profile.username    =  response.user.username
+      @profile.bio         =  response.user.bio
+      @profile.website     =  response.user.website
+      @profile.image_url   =  response.user.profile_picture
+      @profile.full_name   =  response.user.full_name
+      @profile.id          =  response.user.id
+      @profile.profile_pic =  response.user.profile_picture
     redirect_to home_path
   end
 
@@ -35,8 +36,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:access_token] = nil
-    session[:user_id] = nil
+    $session[:access_token] = nil
+    $session[:user_id]      = nil
     redirect_to root_path
   end
 

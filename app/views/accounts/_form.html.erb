@@ -1,9 +1,9 @@
 <%= form_tag '/accounts' do |f| %>
-  <%= f.label            :full_name,   "Full Name"     %>
-  <%= f.url_field_tag    :full_name,   %>
-  <%= f.label            :born_on,     "Date of Birth"  %>
-  <%= f.text_field_tag   :born_on,     %><br/>
-  <%= f.label            :phone,       "Phone"           %>
-  <%= f.phone_field_tag  :phone,       %><br/>
-  <%= f.submit_tag 'Submit!' %>
+  <%= label            :full_name,   "Full Name"     %>
+  <%= url_field_tag    :full_name,   %>
+  <%= label            :born_on,     "Date of Birth"  %>
+  <%= text_field_tag   :born_on,     %><br/>
+  <%= label            :phone,       "Phone"           %>
+  <%= phone_field_tag  :phone,       %><br/>
+  <%= submit_tag 'Submit!' %>
 <% end %>
