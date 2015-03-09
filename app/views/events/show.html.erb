@@ -5,13 +5,17 @@
 <br/>
 <p>
   <div class="events">
-    Event:              <%= @event.pic_url       %><br/>
-    Title:              <%= @event.title         %><br/>
-    Category:           <%= @event.category      %><br/>
-    Location:           <%= @event.location      %><br/>
-    Date:               <%= @event.date          %><br/>
-    Time:               <%= @event.time          %><br/>
-    Description:        <%= @event.description   %><br/>
-    Posted by:          <%= @profile.name        %><br/>
+    Event:              <%= @event.pic_url                   %><br/>
+    Title:              <%= @event.title                     %><br/>
+    Category:           <%= @event.category                  %><br/>
+    Location:           <%= @event.location                  %><br/>
+    Date:               <%= @event.date.strftime("%m/%d/%Y") %><br/>
+    Time:               <%= @event.time                      %><br/>
+    Description:        <%= @event.description               %><br/>
+    Posted by:          <%= @profile.name                    %><br/>
   </div>
 </p>
+
+
+<!-- To pretty-print a Date object, I use the strftime helper -->
+<!-- http://apidock.com/ruby/Time/strftime -->

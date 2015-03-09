@@ -1,8 +1,8 @@
 <%= form_tag '/profiles/new' do |f| %>
   <%= f.label          :image_url, "Profile Photo" %><br/>
-  <%= f.text_field_tag :image_url  %>
+  <%= f.url_field_tag  :image_url  %>
   <%= f.label          :name,      "Name or Alias" %><br/>
-  <%= f.url_field_tag  :name,      :placeholder => "Naptural, AfricanCreature" %>
+  <%= f.text_field_tag :name,      :placeholder => "Naptural, AfricanCreature" %>
   <%= f.label          :location,  "Current Location:" %><br/>
   <%= f.text_field_tag :location,  %>
   <%= f.label          :bio,       "Short Bio:" %><br/>
@@ -11,6 +11,8 @@
   <%= f.text_field_tag :hair,      :placeholder => "bantu knots, Afro, Sleek & Straight" %>
   <%= f.label          :user_type, "Title:" %><br/>
   <%= f.select_tag     :user_type, options_for_select([["blogger"],["youtuber"],["naturalista"]])%>
-  <%= f.submit_tag 'Submit!' %>
+  <%= f.label          :website,   "Add a website" %><br/>
+  <%= f.url_field_tag  :website,   :placeholder => "curiouscurls@wordpress.com" %>
+  <%= f.submit_tag     'Create Profile!' %>
 <% end %>
 

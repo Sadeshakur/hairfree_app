@@ -18,7 +18,7 @@ class AccountsController < ApplicationController
   end
 
   def destroy
-    Account.destroy(params[:id])
+    User.destroy(params[:id])
     redirect_to '/signup'
   end
 

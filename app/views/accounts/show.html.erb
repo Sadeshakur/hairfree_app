@@ -1,0 +1,15 @@
+<a href='/account/edit'>Update Account</a>
+<a href='/sessions/destroy'>Delete Account</a><br/>
+<!-- add alert to warn if clicked -->
+
+<p>
+  <div class="show-account">
+    First Name:    <%= @account.f_name                     %><br/>
+    Last Name:     <%= @account.l_name                     %><br/>
+    Date of Birth: <%= @account.date.strftime("%m/%d/%Y")  %><br/>
+    Phone Number:  <%= @account.phone                      %><br/>
+  </div>
+</p>
+
+<!-- To pretty-print a Date object, I use the strftime helper -->
+<!-- http://apidock.com/ruby/Time/strftime -->
