@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
       params[:code],
       :redirect_uri => "http://#{request.host_with_port}/oauth/callback"
     )
+    binding.pry
     session[:access_token] = response.access_token
     redirect_to home_path
   end
