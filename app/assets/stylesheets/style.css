@@ -68,7 +68,6 @@ header p {
 
 .social-icons-wrapper {
   width: 85%;
-  display: inline-block;;
 }
 
 .homepage-pic-row {
@@ -92,7 +91,7 @@ header p {
 }
 
 footer img {
-  width: 8%;
+  width: 20%;
   margin-left: 9%;
 }
 
