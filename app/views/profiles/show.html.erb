@@ -1,8 +1,9 @@
    <div class="profile">
-     Photo:              <%= @profile.image_url %>
-     Name:               <%= @profile.name %><br/>
-     Title:              <%= @profile.user_type %><br/>
-     Hair:               <%= @profile.hair %><br/>
-     Location:           <%= @profile.location %><br/>
-     Bio:                <%= @profile.bio %><br/>
+     Photo:              <%= @profile.profile_pic %>
+     Name:               <%= @profile.name        %>      <br/>
+     Website:   <a href="<%= @profile.website     %>"></a><br/>
+     Title:              <%= @profile.user_type   %>      <br/>
+     Location:           <%= @profile.location    %>      <br/>
+     Hair:               <%= @profile.hair        %>      <br/>
+     Bio:                <%= @profile.bio         %>      <br/>
    </div>

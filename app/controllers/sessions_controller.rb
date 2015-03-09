@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     user     = User.find_by email: email
     if user && user.authenticate(password)
       session[:user_id] = user.id
+      # account.email = user.email
       redirect_to '/home'
     end
   end
@@ -18,8 +19,13 @@ class SessionsController < ApplicationController
       params[:code],
       :redirect_uri => "http://#{request.host_with_port}/oauth/callback"
     )
-    binding.pry
     session[:access_token] = response.access_token
+      @name      =  response.user.username
+      @bio       =  response.user.bio
+      @website   =  response.user.website
+      @image_url =  response.user.profile_picture
+      @full_name =  response.user.full_name
+      @id        =  response.user.id
     redirect_to home_path
   end
 

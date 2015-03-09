@@ -15,12 +15,26 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    profile = Profile.create(profile_params)
     user = User.find_by users_id: profile[:users_id]
     user.profiles_id = profile.id
-    user.save
 
-    redirect_to '/profiles'
+    if sessions[:access_token]
+      @profile             =  response.user
+      @profile.name        =  response.user.username
+      @profile.bio         =  response.user.bio
+      @profile.website     =  response.user.website
+      @profile.profile_pic =  response.user.profile_picture
+      @profile.full_name   =  response.user.full_name
+      @profile.id          =  response.user.id
+      @profile.user_type   =  nil
+      @profile.location    =  nil
+      @profile.hair        =  nil
+      profile.save
+    else sessions[:user_id]
+      @profile = Profile.create(profile_params)
+      profile.save
+    end
+      redirect_to '/profiles'
   end
 
   def edit
@@ -28,7 +42,7 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.require(:profile).permit(:image_url, :name, :location, :bio, :hair, :user_type, :events_id, :users_id)
+    params.require(:profile).permit(:name, :bio, :website, :profile_pic, :full_name, :id, :users_type, :location, :hair)
   end
 
 end
