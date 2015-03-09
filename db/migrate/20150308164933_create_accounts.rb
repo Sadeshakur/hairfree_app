@@ -1,8 +1,7 @@
 class CreateAccounts < ActiveRecord::Migration
   def change
     create_table :accounts do |t|
-      t.string     :f_name
-      t.string     :l_name
+      t.string     :full_name
       t.date       :born_on
       t.string     :phone
       t.references :users, null: false

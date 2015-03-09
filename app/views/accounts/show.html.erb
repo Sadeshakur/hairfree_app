@@ -4,8 +4,7 @@
 
 <p>
   <div class="show-account">
-    First Name:    <%= @account.f_name                     %><br/>
-    Last Name:     <%= @account.l_name                     %><br/>
+    First Name:    <%= @account.full_name                  %><br/>
     Date of Birth: <%= @account.date.strftime("%m/%d/%Y")  %><br/>
     Phone Number:  <%= @account.phone                      %><br/>
   </div>

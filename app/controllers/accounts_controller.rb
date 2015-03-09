@@ -5,7 +5,16 @@ class AccountsController < ApplicationController
   end
 
   def create
-    account = Account.create(account_params)
+    if sessions[:access_token]
+      @account.full_name   =  response.user.full_name
+      @account.born_on     =  nil
+      @account.phone       =  nil
+    else sessions[:user_id]
+      @profile = Profile.create(profile_params)
+    end
+    user = User.find :id account[:users_id]
+    user.accounts_id = account.id
+    profile.save
     redirect_to 'account/show'
   end
 
