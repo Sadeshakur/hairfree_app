@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @profile = Profile.find(params[:id])
+    @event   = Event.find(params[:id])
   end
 
 end

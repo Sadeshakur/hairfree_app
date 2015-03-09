@@ -9,6 +9,6 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps
       t.references :profiles
       end
-    add_column :users, :name, :string
+    add_column :users, :users_name, :string
   end
 end

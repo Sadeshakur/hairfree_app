@@ -12,9 +12,6 @@
     Date:               <%= @event.date          %><br/>
     Time:               <%= @event.time          %><br/>
     Description:        <%= @event.description   %><br/>
-    Posted by:          <%  current_user.name    %><br/>
+    Posted by:          <%= @profile.name        %><br/>
   </div>
 </p>
-
-<!--
-User.find(params[:id]). -->
