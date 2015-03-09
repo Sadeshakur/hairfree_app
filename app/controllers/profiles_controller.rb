@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find(session[:user_id])
   end
 
   def create

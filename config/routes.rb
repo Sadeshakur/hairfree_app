@@ -15,14 +15,11 @@ Rails.application.routes.draw do
   get    '/home'              =>    'welcome#home'
   get    '/welcome'           =>    'welcome#new'
 
-  get    '/profiles'          =>    'profiles#index'
-  get    '/profiles/show/:id' =>    'profiles#show'
-  get    '/profile/new'       =>    'profiles#new'
+  get    '/profile'           =>    'profiles#show'
+  get    '/event'             =>    'events#show'
 
-  get    '/events'            =>    'events#index'
-  get    '/events/show/:id'   =>    'events#show'
-  get    '/events/new'        =>    'events#new'
+  resources :profiles
+  resources :events
+  resources :messages
 
-
-  # get    '/signup'    =>    'users#new'
 end

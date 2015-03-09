@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       params[:code],
       :redirect_uri => "http://#{request.host_with_port}/oauth/callback"
     )
-    session[:access_token]=  response.access_token
+    session[:access_token] =  response.access_token
       @profile             =  response.user
       @profile.username    =  response.user.username
       @profile.bio         =  response.user.bio
@@ -36,8 +36,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    $session[:access_token] = nil
-    $session[:user_id]      = nil
+    session[:access_token] = nil
+    session[:user_id]      = nil
     redirect_to root_path
   end
 

@@ -9,7 +9,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string     :bio
       t.string     :hair
       t.references :events
-      t.references :users, null: false
+      t.references :user, null: false
       t.timestamps
     end
   end

@@ -4,7 +4,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string     :full_name
       t.date       :born_on
       t.string     :phone
-      t.references :users, null: false
+      t.references :user, null: false
     end
   end
 end
