@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.string   "bio"
     t.string   "hair"
     t.integer  "events_id"
-    t.integer  "user_id",     null: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

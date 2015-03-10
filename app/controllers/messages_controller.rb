@@ -9,9 +9,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(params[:new_message])
-    @message.user_id = current_user.id
+    @message.user_id = session[:user_id]
     @message.save
-    redirect_to '/event'
+    render :json => @message
   end
 
   def destroy

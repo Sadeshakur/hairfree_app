@@ -14,13 +14,16 @@ Rails.application.routes.draw do
 
   get    '/home'              =>    'welcome#home'
   get    '/welcome'           =>    'welcome#new'
+  get    '/profile/show'      =>    'profiles#show'
 
   # get    '/profile'           =>    'profiles#show'
   # get    '/event'             =>    'events#show'
 
 post '/users/create'          => 'users#create'
 post '/profiles/create'       => 'profiles#create'
+post '/messages/create'       => 'messages#create'
 
+# get 'events/new'  => 'events#new'
 
   resources :welcome
   resources :profiles

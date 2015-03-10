@@ -8,17 +8,13 @@ class UsersController < ApplicationController
 
   def create
     if session[:access_token]
-    @user = User.create(
-    :email       =>  params[:email],
-    :password    =>  params[:password],
-    :id          => session[:user_id])
-
-    else session[:user_id]
+      @user = User.create
+    else
+      session[:user_id]
       @user = User.create(user_params)
     end
       user    = User.new
       @user.save
-      redirect_to 'profiles/create'
   end
 
   def new
