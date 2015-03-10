@@ -19,12 +19,13 @@
 <div class="container">
   <ul class="nav nav-tabs">
               <span>
-                <li><a href="/logout">Log Out</a><br/></li>
                 <li><a href='/profile'>Profile</a></li>
                 <li><a href='/home'>Home</a></li>
                 <li><a href='/events'>Events</a></li>
                 <li><a href='/messages/new'>Messages</a></li>
               </span>
+  </ul>
+</div>
           <% else %>
                 <li><a href='/oauth/connect'>Sign in with Instagram</a><br/></li>
               <span>
@@ -36,8 +37,6 @@
                 <li><a href='/home'>Home</a></li>
                 <li><a href='/events'>Events</a></li>
               </span>
-  </ul>
-</div>
           <% end %>
 
   <%= yield %>
