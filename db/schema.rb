@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.integer  "accounts_id"
     t.integer  "profiles_id"
     t.integer  "events_id"
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "profile_id"

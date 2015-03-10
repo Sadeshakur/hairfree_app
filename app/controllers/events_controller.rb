@@ -5,7 +5,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
     @event   = Event.find(params[:id])
   end
 
@@ -15,18 +14,28 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    if session[:user_id]
-      @event.user_id = params(session[:user_id])
-    else session[:access_token]
-      @event.user_id = params(session[:access_token])
-    end
+    @event.id = session[:user_id]
     @event.save
-    redirect_to '/events'
+    redirect_to event_path
+  end
+
+   def edit
+    @event = Event.find(@event.id)
+  end
+
+  def update
+    event = Event.find(@event.id)
+    event.update(event_params)
+    redirect_to event_path(event)
+  end
+
+  def destroy
+    Event.destroy(@event.id)
+    redirect_to events_path
   end
 
   private
 
-    binding.pry
     def event_params
       params.require(@event).permit(:pic_url, :title, :category, :location, :date, :time, :description)
     end

@@ -7,8 +7,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-    redirect_to '/welcome'
+    if session[:access_token]
+    @user = User.create(
+    :email       =>  params[:email],
+    :password    =>  params[:password],
+    :id          => session[:user_id])
+
+    else session[:user_id]
+      @user = User.create(user_params)
+    end
+      user    = User.new
+      @user.save
+      redirect_to 'profiles/create'
   end
 
   def new
