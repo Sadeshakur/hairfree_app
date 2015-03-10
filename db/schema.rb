@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.string  "full_name"
     t.date    "born_on"
     t.string  "phone"
-    t.integer "users_id",  null: false
+    t.integer "user_id",   null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.date     "date"
     t.datetime "time"
     t.string   "description"
-    t.integer  "users_id",    null: false
+    t.integer  "user_id",     null: false
   end
 
   create_table "invites", force: :cascade do |t|
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20150309214853) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string  "subject"
     t.string  "body"
     t.date    "date_sent"
     t.integer "user_id",   null: false
@@ -56,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.string   "bio"
     t.string   "hair"
     t.integer  "events_id"
-    t.integer  "users_id",    null: false
+    t.integer  "user_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,7 +68,7 @@ ActiveRecord::Schema.define(version: 20150309214853) do
     t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "users_name"
+    t.integer  "profile_id"
   end
 
 end

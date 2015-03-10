@@ -1,14 +1,24 @@
 class MessagesController < ApplicationController
 
   def new
-    @message = Message.new
   end
 
   def create
-    @message = Message.create(message_params)
-
+    @message = Message.new(params[:new_message])
+    @message.user_id = current_user.id
     @message.save
-    redirect_to 'event'
+    redirect_to '/event'
+  end
+
+  def destroy
+    @message = Message.find(params[:id]).destroy
+    redirect_to '/message/index'
+  end
+
+private
+
+  def message_params
+    params.require(:message).permit(:new_message)
   end
 
 end

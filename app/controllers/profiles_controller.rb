@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
     else sessions[:user_id]
       @profile = Profile.create(profile_params)
     end
-      user = User.find_by id: profile[:users_id]
+      user = User.find_by id: profile[:user_id]
       user.profiles_id = profile.id
       profile.save
       # binding.pry

@@ -2,15 +2,15 @@
 <input id="message-text" type="text" name="messages">
 <button id="create-message">Add message</button>
 <p id="message-box"></p>
+<body></body>
 
 <script type="text/javascript">
-
   $("#create-message").on("click",function(){
     var new_message = $("#message-text").val();
     $.ajax({
       url: "/messages",
       type: "POST",
-      dataType: "json"
+      dataType: "json",
       data: { body: new_message}
     }).done(function(data){
       var $text = $("<p>").text(new_message)
@@ -20,5 +20,6 @@
 </script>
 
 
+3WQ34W
 
 

@@ -1,18 +1,25 @@
 <%= form_tag '/events' do |f| %>
-  <%= label          :pic_url,     "Add a Photo"     %><br/>
-  <%= image_tag      :pic_url      %>
-  <%= label          :title,       "Event Title"       %>
-  <%= text_field_tag :title        %>
-  <%= label          :category,    "Event Category"    %>
-  <%= select_tag     :category,    options_for_select([["brunch"],["social"],["panel"],["party"],["forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])     %><br/>
-  <%= label          :location,    "Address"           %><br/>
-  <%= text_field_tag :location     %><br/>
-  <%= label          :date,        "Date"              %>
-  <%= date_field_tag :date         %>
-  <%= label          :time,        "Time"              %>
-  <%= time_field_tag :time         %><br/>
-  <%= label          :description, "Description"       %><br/>
-  <%= text_field_tag :description                      %><br/>
+  <div class="first-line-events">
+    <%= label          :pic_url,     "Add a Photo(copy URL)"     %><br/></p>
+    <%= text_field_tag :pic_url      %>
+    <%= label          :title,       "Event Title"       %>
+    <%= text_field_tag :title        %></br></p>
+  </div>
+  <div class="second-line-events">
+    <%= select_tag     :category,    options_for_select([["select a category"],["brunch"],["social"],["panel"],["party"],["forum"], ["livestream"], ["podcasts"], ["concerts"], ["fundraiser"], ["photo/videoshoot"], ["other"] ])     %>
+    <%= label          :location,    "Address"           %>
+    <%= text_field_tag :location     %><br/></p>
+  </div>
+  <div class="third-line-events">
+    <%= label          :date,        "Date"              %>
+    <%= date_field_tag :date         %>
+    <%= label          :time,        "Time"              %>
+    <%= time_field_tag :time         %><br/></p>
+  </div>
+  <div class="forth-line-events">
+    <%= label          :description, "Description"       %><br/>
+    <%= text_area_tag :description                      %><br/></p>
+  </div>
   <%= submit_tag 'Submit!' %>
 <% end %>
 

@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
     else sessions[:user_id]
       @profile = Profile.create(profile_params)
     end
-    user = User.find :id account[:users_id]
+    user = User.find :id account[:user_id]
     user.accounts_id = account.id
     profile.save
     redirect_to 'account/show'
@@ -32,7 +32,7 @@ class AccountsController < ApplicationController
   end
 
   def account_params
-    params.require(:account).permit( :f_name, :l_name, :born_on, :phone)
+    params.require(:account).permit( :fullname, :born_on, :phone)
   end
 
 end
