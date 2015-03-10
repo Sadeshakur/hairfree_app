@@ -47,3 +47,5 @@ group :development, :test do
 end
 
 gem 'instagram'
+
+gem 'bootstrap-sass', '~> 2.3.1.0'

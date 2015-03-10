@@ -13,6 +13,7 @@
       dataType: "json",
       data: { body: new_message}
     }).done(function(data){
+      console.log(data)
       var $text = $("<p>").text(new_message)
       $("body").append(message);
     });

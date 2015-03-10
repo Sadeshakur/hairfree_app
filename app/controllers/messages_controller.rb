@@ -3,6 +3,10 @@ class MessagesController < ApplicationController
   def new
   end
 
+  def index
+    @message = Message.all
+  end
+
   def create
     @message = Message.new(params[:new_message])
     @message.user_id = current_user.id

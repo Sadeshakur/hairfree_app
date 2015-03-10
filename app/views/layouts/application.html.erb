@@ -8,44 +8,37 @@
 </head>
 <body>
 
-
-    <div class="header">
-      <span>
-        <strong><h1>H    A    I    R    F    R    E    E!</h1></strong>
-      </span>
-    </div>
-
-    <div class="nav">
-        <% if session[:access_token] %>
-          <span>
-            <a href="/logout">Log Out</a><br/>
-
-            <a href='/profile'>Profile</a>
-            <a href='/home'>Home</a>
-            <a href='/events'>Events</a>
-            <a href='/messages/new'>Messages</a>
-          </span>
-        <% elsif session[:user_id] %>
-          <span>
-            <a href="/logout">Log Out</a><br/>
-            <a href='/profile'>Profile</a>
-            <a href='/home'>Home</a>
-            <a href='/events'>Events</a>
-            <a href='/messages/new'>Messages</a>
-          </span>
-        <% else %>
-              <a href='/oauth/connect'>Sign in with Instagram</a></p>
-            <span>
-              <a href='/login'>login</a>
-              <a href='/signup'>signup</a>
-            </span>
-      <% end %>
-    </div>
       <div class="logo-icon">
           <footer>
             <div class="half"><%= image_tag "fl.jpg" %></div>
           </footer>
       </div>
+      <div class="logo-name"><%= image_tag "logo.jpg" %></div>
+          <% if @current_user %>
+                <li><a href="/logout">Log Out</a><br/></li>
+<div class="container">
+  <ul class="nav nav-tabs">
+              <span>
+                <li><a href="/logout">Log Out</a><br/></li>
+                <li><a href='/profile'>Profile</a></li>
+                <li><a href='/home'>Home</a></li>
+                <li><a href='/events'>Events</a></li>
+                <li><a href='/messages/new'>Messages</a></li>
+              </span>
+          <% else %>
+                <li><a href='/oauth/connect'>Sign in with Instagram</a><br/></li>
+              <span>
+                <li><a href='/login'>login</a></li>
+                <li><a href='/signup'>signup</a></li><br/>
+              </span>
+              <div class="container">
+              <span>
+                <li><a href='/home'>Home</a></li>
+                <li><a href='/events'>Events</a></li>
+              </span>
+  </ul>
+</div>
+          <% end %>
 
   <%= yield %>
 

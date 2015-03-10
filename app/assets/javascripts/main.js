@@ -1,1 +1,5 @@
-console.log('main.js linked');
+
+
+$(document).ready(function(){
+  console.log('main.js linked');
+});
