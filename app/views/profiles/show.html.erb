@@ -1,9 +1,42 @@
-   <div class="profile">
-     Photo:              <%= @profile.profile_pic %>
+   <div class="profile-info">
+     Photo:              <%= image_tag @profile.profile_pic %>
      Name:               <%= @profile.username    %>      <br/>
-     Website:   <a href="<%= @profile.website     %>"></a><br/>
+     Website:    <a href=<%= @profile.website     %>></a> <br/>
      Title:              <%= @profile.user_type   %>      <br/>
      Location:           <%= @profile.location    %>      <br/>
      Hair:               <%= @profile.hair        %>      <br/>
-     Bio:                <%= @profile.bio         %>      <br/>
    </div>
+
+     Bio:                <%= @profile.bio         %>      <br/>
+
+
+<!-- Write on <%= @profile.username %>'s wall: -->
+
+
+<div class="profile-wall">
+  <h3>Talk to <%= @profile.username %></h3>
+
+  <input id="post-text" type="text" name="post-text">
+  <button id="create-post">Post</button>
+  <p id="wall-post-box"></p>
+</div>
+
+
+  <script type="text/javascript">
+  $("#create-post").on("click",function(){
+    var new_post = $("#message-text").val();
+    $.ajax({
+      url: "/messages",
+      type: "POST",
+      dataType: "json",
+      data: { post: new_post}
+    }).done(function(data){
+      console.log(data)
+      var $post = $("<p>").text(new_post)
+      $("#wall-post-box").append($post);
+    });
+  })
+</script>
+
+
+

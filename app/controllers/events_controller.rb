@@ -14,17 +14,17 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    @event.id = session[:user_id]
+    @event.user_id = session[:user_id]
     @event.save
     redirect_to event_path
   end
 
    def edit
-    @event = Event.find(@event.id)
+    @event = Event.find(:event_id)
   end
 
   def update
-    event = Event.find(@event.id)
+    event = Event.find(:event_id)
     event.update(event_params)
     redirect_to event_path(event)
   end

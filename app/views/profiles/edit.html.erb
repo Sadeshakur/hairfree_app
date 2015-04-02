@@ -1,3 +1,27 @@
 <h1>Edit Profile</h1>
 
 <%= render "form" %>
+
+
+<h3>Share photos from your hair journey</h3>
+
+<button>Add a picture</button>
+
+<input id='hair-pic' type='text' name='hair-pics'>
+
+
+<script type="text/javascript">
+  $("#add-post").on("click",function(){
+    var new_pic = $("#hair-pic").val();
+    $.ajax({
+      url: "/messages",
+      type: "POST",
+      dataType: "json",
+      data: { post: new_post}
+    }).done(function(data){
+      console.log(data)
+      var $post = $("<p>").text(new_post)
+      $("#wall-post-box").append($post);
+    });
+  })
+</script>

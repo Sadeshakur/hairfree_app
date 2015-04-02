@@ -15,37 +15,33 @@
       </div>
 <div class="container">
   <ul class="nav nav-tabs">
-          <% if session[:access_token] %>
+          <% if session[:user_id] %>
+              <strong>
                 <span class = "sign-in-links">
-                <strong>
                   <a href="/logout">Log Out</a>
-                </strong></span>
-              <strong><large><span>
-                <a href='/profile/show'>Profile</a>
-                <a href='/home' >Home</a>
-                <a href='/events'>Events</a>
-                <a href='/messages/new'>Messages</a>
-              </strong></span></large>
-          <% elsif session[:user_id] %>
-                <span class = "sign-in-links">
-                  <a href="/logout">Log Out</a></li>
                 </span>
-              <strong><large><span>
-                <a href='/profile/show'>Profile</a>
-                <a href='/home' >Home</a>
-                <a href='/events'>Events</a>
-                <a href='/messages/new'>Messages</a>
-              </strong></span></large>
+                <span>
+                  <a href='/profile/show'>Profile</a>
+                  <a href='/home' >Home</a>
+                  <a href='/events'>Events</a>
+                  <a href='/messages/new'>Messages</a>
+                  <a href='/forums/index'>Forums</a>
+                </span>
+              </strong>
+
           <% else %>
-                <a href='/oauth/connect'>Sign in with Instagram</a><br/>
+            <strong>
               <span class = "sign-in-links">
+                <a href='/oauth/connect'><button>Sign in with Instagram</button></a><br/>
                 <a href='/login'>login</a>
                 <a href='/signup'>signup</a><br/>
               </span>
               <span>
-                <a href='/home'>Home</a>
                 <a href='/events'>Events</a>
+                <a href='/home'>Home</a>
+                <a href='/forums/index'>Forums</a>
               </span>
+            </strong>
           <% end %>
   </ul>
 </div>
