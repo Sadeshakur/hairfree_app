@@ -15,14 +15,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @message = Message.find(params[:id]).destroy
-    redirect_to '/message/index'
+    @post = Post.find(params[:id]).destroy
+    redirect_to '/post/index'
   end
 
 private
 
-  def message_params
-    params.require(:message).permit(:new_message)
+  def post_params
+    params.require(:post).permit(:new_post)
   end
 
 end
