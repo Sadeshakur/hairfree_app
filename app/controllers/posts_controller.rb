@@ -1,16 +1,16 @@
-class MessagesController < ApplicationController
+class PostsController < ApplicationController
 
   def new
   end
 
   def index
-    @messages = Message.all
+    @posts = Post.all
   end
 
   def create
-    @message = Message.new(params[:new_message])
-    @message.user_id = session[:user_id]
-    @message.save
+    @post = Post.new(params[:new_post])
+    @post.user_id = session[:user_id]
+    @post.save
     render :json => @message
   end
 
