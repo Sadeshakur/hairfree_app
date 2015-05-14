@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
 post '/users/create'          => 'users#create'
 post '/profiles/create'       => 'profiles#create'
-post '/messages/create'       => 'messages#create'
+post '/messages'       => 'messages#create'
 
 # get 'events/new'  => 'events#new'
 
